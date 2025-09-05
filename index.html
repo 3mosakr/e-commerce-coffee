@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jazean Coffee</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <!-- Bootstrap cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Some refrances -->
+    <!-- https://ecomm.design/site/jazean-coffee/ -->
+    <!-- https://store.jazeancoffee.com/?ref=ecommdesign -->
+    <!-- https://p.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/index.html -->
+
+    <header>
+      <div class="scrollToTop hidden"><i class="fa-solid fa-up-long"></i></div>
+      <nav>
+        <div class="header_logo">
+          <a href="https://store.jazeancoffee.com/?lang=en">
+            <!-- <svg
+              class="h-[49px] lg:h-[57px] w-auto rtl:hidden ltr:block"
+              viewBox="0 0 199 64"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.1034 33.3793L16.8276 29.1034C16.5517 29.3793 16.2759 29.7931 15.8621 29.931L21.931 36C21.6552 35.0345 21.3793 34.2069 21.1034 33.3793ZM13.5172 24.1379C12.1379 24.1379 10.8966 25.2414 10.8966 26.7586C10.8966 28.2759 12 29.3793 13.5172 29.3793C15.0345 29.3793 16.1379 28.2759 16.1379 26.7586C16.1379 25.2414 15.0345 24.1379 13.5172 24.1379ZM19.5862 11.5862L16.4138 8.41379C16 8.55172 15.7241 8.82759 15.3103 9.10345L19.1724 12.9655C19.1724 12.4138 19.4483 12 19.5862 11.5862ZM18.2069 20.4138L11.1724 13.3793C10.8966 13.7931 10.7586 14.069 10.4828 14.4828L18.2069 22.2069C18.2069 21.6552 18.2069 20.9655 18.2069 20.4138ZM38.4828 28.2759L41.6552 25.1034C41.6552 24.5517 41.5172 24 41.3793 23.5862L37.5172 27.4483C37.7931 27.7241 38.2069 28 38.3448 28.4138L38.4828 28.2759ZM33.3793 12.9655L35.4483 10.8966C35.1724 10.6207 34.7586 10.3448 34.4828 10.069L32.4138 12.1379C32.8276 12.4138 33.1034 12.6897 33.3793 12.9655ZM29.7931 18.2069C31.1724 18.2069 32.4138 17.1034 32.4138 15.5862C32.4138 14.069 31.3103 12.9655 29.7931 12.9655C28.2759 12.9655 27.1724 14.069 27.1724 15.5862C27.1724 17.1034 28.2759 18.2069 29.7931 18.2069ZM22.8966 42.069H7.58621C7.58621 42.4828 7.86207 42.8965 7.86207 43.3103H22.8966C22.8966 42.8965 22.8966 42.4828 22.8966 42.069ZM32.4138 30.7586C32.4138 32.1379 33.5172 33.3793 35.0345 33.3793C36.5517 33.3793 37.6552 32.2759 37.6552 30.7586C37.6552 29.2414 36.5517 28.1379 35.0345 28.1379C33.5172 28.1379 32.4138 29.2414 32.4138 30.7586ZM40.5517 6.62069C34.7586 0.827587 27.8621 0 24.2759 0C20.6897 0 13.7931 0.827586 8.13793 6.75862C2.75862 12.4138 0 20.8276 0 32C0 43.1724 2.75862 51.5862 8.13793 57.2414C13.7931 63.0345 20.6897 64 24.2759 64C27.8621 64 34.7586 63.1724 40.4138 57.2414C45.7931 51.5862 48.5517 43.1724 48.5517 32C48.5517 20.8276 45.7931 12.4138 40.4138 6.75862L40.5517 6.62069ZM24.4138 62.4828C14.6207 62.4828 1.37931 55.7241 1.37931 31.8621C1.37931 8 14.4828 1.24138 24.2759 1.24138C34.069 1.24138 47.3103 8 47.3103 31.8621C47.3103 55.7241 34.2069 62.4828 24.2759 62.4828H24.4138ZM11.1724 23.3103L8 20.1379C8 20.5517 7.72414 21.1034 7.58621 21.5172L10.2069 24.1379C10.4828 23.7241 10.7586 23.4483 11.0345 23.1724L11.1724 23.3103ZM27.7241 38.8966L32.4138 34.2069C32 33.931 31.7241 33.6552 31.4483 33.3793L27.4483 37.3793C27.0345 35.3103 26.3448 33.3793 25.6552 31.5862C25.6552 31.4483 25.5172 31.1724 25.3793 31.0345L39.5862 16.8276C39.4483 16.4138 39.1724 16 39.0345 15.5862L24.8276 29.7931C24.1379 27.7241 23.4483 25.5172 23.3103 22.8966L27.0345 19.1724C26.7586 18.8965 26.3448 18.6207 26.2069 18.2069L23.3103 21.1034C23.3103 19.4483 23.5862 17.5172 24 15.3103C24.6897 12.2759 26.069 8.82759 27.3103 6.62069H25.931C25.931 6.48276 21.2414 12.9655 20.8276 20C20.6897 22.6207 20.9655 25.2414 21.6552 27.8621C22.3448 30.4828 22.6207 31.0345 23.1724 32.5517C24.8276 37.1034 26.3448 41.2414 24.6897 48.9655C24 52 22.8965 54.8965 21.6552 57.2414C21.931 57.2414 22.4828 57.2414 22.7586 57.3793C23.0345 57.5172 23.1724 57.3793 23.1724 57.3793C25.1034 54.6207 25.5172 54.3448 27.3103 49.5172C27.8621 49.931 28.5517 50.3448 29.1034 50.7586C29.2414 51.5862 29.931 53.7931 31.8621 55.5862C32.2759 55.4483 32.6897 55.1724 33.1034 54.8965C31.7241 53.7931 31.0345 52.5517 30.7586 51.5862C32.4138 52.4138 33.931 52.8276 35.3103 53.2414C35.5862 52.9655 35.7241 52.8276 36 52.6897C36.1379 52.5517 36.2759 52.4138 36.4138 52.1379C33.7931 51.5862 30.3448 50.4828 27.5862 48C27.8621 46.2069 28 44.6897 28 43.1724H40.8276C40.8276 42.7586 41.1034 42.3448 41.1034 41.931H27.8621C27.8621 40.8276 27.8621 39.8621 27.5862 38.8966H27.7241ZM15.7241 45.1034C13.6552 46.2069 11.3103 46.7586 9.37931 47.0345C9.51724 47.4483 9.7931 47.8621 9.93103 48.2759C12.5517 47.8621 15.5862 47.0345 18.069 45.2414H15.7241V45.1034ZM22.7586 45.6552C19.5862 49.2414 15.0345 50.7586 11.8621 51.3103C12.1379 51.7241 12.5517 52.1379 12.8276 52.4138C14.4828 52.1379 16.2759 51.5862 18.2069 50.6207C17.7931 51.7241 16.9655 53.3793 15.1724 54.4828C15.5862 54.7586 16 55.0345 16.2759 55.1724C18.7586 53.3793 19.5862 50.6207 19.7241 49.7931C20.5517 49.2414 21.5172 48.5517 22.3448 47.8621C22.4828 47.0345 22.6207 46.3448 22.7586 45.6552ZM29.5172 45.1034C32.1379 47.5862 35.7241 48.5517 38.6207 48.8276C38.8966 48.4138 39.0345 48 39.3103 47.5862C36.8276 47.3103 33.931 46.6207 31.5862 45.1034H29.5172ZM80.6886 20.5517V31.5862C80.6886 36.5517 78.7575 39.0345 74.7575 38.8966C71.7231 38.8966 69.3782 37.2414 68.5506 34.3448L70.0679 33.931C70.7575 36.1379 72.5506 37.3793 74.6196 37.3793C77.792 37.3793 79.0334 35.4483 79.0334 31.5862V20.5517H80.6886ZM96.2748 19.8621L86.0679 38.7586H87.861L90.2058 34.2069H102.068L104.413 38.7586H106.206L96.1368 19.8621H96.2748ZM91.0334 32.6897L96.1368 22.8966L101.24 32.6897H90.8955H91.0334ZM165.516 19.8621L155.309 38.7586H157.102L159.447 34.2069H171.309L173.654 38.7586H175.447L165.378 19.8621H165.516ZM160.275 32.6897L165.378 22.8966L170.482 32.6897H160.137H160.275ZM127.309 20.4138L114.344 37.1034H127.309V38.6207H111.447L124.413 21.931H112.275V20.4138H127.447H127.309ZM136.689 37.1034H149.102V38.6207H135.033V20.4138H149.102V21.931H136.689V28H145.93V29.5172H136.689V37.1034ZM198.206 20.4138V38.6207H196.551L183.309 22.7586V38.6207H181.654V20.4138H183.309L196.551 36.2759V20.4138H198.206Z"
+                fill="url(#goldWaves)"
+              ></path>
+              <defs>
+                <linearGradient
+                  id="goldWaves"
+                  x1="198"
+                  y1="32"
+                  x2="-1.25918e-05"
+                  y2="32"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#BC9B57"></stop>
+                  <stop offset="0.464505" stop-color="#FBE8B5"></stop>
+                  <stop offset="1" stop-color="#BC9B57"></stop>
+                </linearGradient>
+              </defs>
+            </svg> -->
+
+            <img src="images/logo-en.png" alt="" width="100%" />
+          </a>
+        </div>
+        <div class="nav_links">
+          <div class="nav_links_item"><a href="#">OUR STORY</a></div>
+          <div class="nav_links_item"><a href="#">STORE</a></div>
+          <div class="nav_links_item"><a href="#">BUSINESSES</a></div>
+          <div class="nav_links_item"><a href="#">BLOG & NEWS</a></div>
+          <div class="nav_links_item"><a href="#">CONTACT US</a></div>
+        </div>
+        <div class="nav_cart">
+          <p class="lead p-3">auth</p>
+          <button class="btn btn-secondary">Login</button>
+          <button class="btn-cart" onclick="openCart()">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
+          <!-- <a href="#">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </a> -->
+        </div>
+      </nav>
+    </header>
+    <main class="pb-5">
+      <section class="hero pt-5 pb-5">
+        <div class="slider">
+          <div class="slide active">
+            <img src="images/slider1.jpg" alt="" />
+          </div>
+          <div class="slide"><img src="images/slider2.jpg" alt="" /></div>
+        </div>
+      </section>
+
+      <section class="container products__section">
+        <div
+          class="products_header d-flex justify-content-between align-items-center"
+        >
+          <div class="products_h_title col">
+            <h5>ALL PRODUCTS</h5>
+            <p class="lead">
+              Jazean, where our land meets ambition and our heritage connects to
+              our vision.
+            </p>
+          </div>
+          <div
+            class="products_h_filters col d-flex flex-wrap justify-content-around"
+          >
+            <div class="filters"><p>Show only</p></div>
+            <div class="filters">
+              <button
+                class="btn filters_btn filter-btn activeFilter"
+                onclick="filterProucts(event)"
+              >
+                All
+              </button>
+            </div>
+            <div class="filters">
+              <button
+                class="btn filters_btn filter-btn"
+                onclick="filterProucts(event)"
+              >
+                Speciality Coffee
+              </button>
+            </div>
+            <div class="filters">
+              <button
+                class="btn filters_btn filter-btn"
+                onclick="filterProucts(event)"
+              >
+                Saudi Coffee
+              </button>
+            </div>
+            <div class="filters">
+              <button
+                class="btn filters_btn filter-btn"
+                onclick="filterProucts(event)"
+              >
+                Bundles
+              </button>
+            </div>
+            <div class="filters">
+              <button
+                class="btn filters_btn filter-btn"
+                onclick="filterProucts(event)"
+              >
+                Preparation Tools
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="products__items mt-5">
+          <!-- <div class="product_item p-3">
+            <div class="product_item-img">
+              <img
+                src="images/p1.webp"
+                alt="product"
+                onclick="productDetails()"
+              />
+            </div>
+            <h3 class="product_item-name">productName</h3>
+            <p class="product_item-descr">
+              Hand-picked with meticulous care by passionate local farmers, the
+              100% Khawalni beans embody the spirit of Jazan.
+            </p>
+            <p class="product_item-price">price</p>
+
+            <button class="btn btn-sm btn-addtocart" onclick="addtocart()">
+              Quick Add
+            </button>
+          </div> -->
+        </div>
+      </section>
+
+      <div class="product__details">
+        <button class="btn btn-close-white close-btn" onclick="closeDetails()">
+          X
+        </button>
+        <!--  <div class="p_details-data">
+          <div class="details-data-header">
+            <h1>product name</h1>
+            <p>product description</p>
+          </div>
+          <div class="details-data-form">
+            <input
+              type="number"
+              name="count"
+              id="count"
+              value="1"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-success">Add to Cart</button>
+          </div>
+        </div>
+        <div class="p_details-img">
+          <div class="p_details-imgs">
+            <img class="details-img" src="images/p1.webp" alt="pimg" />
+          </div>
+        </div> -->
+      </div>
+
+      <div class="cartview">
+        <button
+          class="btn btn-close-white close-btn-cart"
+          onclick="closeCart()"
+        >
+          X
+        </button>
+
+        <div class="d-flex flex-column w-75">
+          <div
+            class="cart-items d-flex flex-column justify-content-center w-100"
+          >
+            <!-- <div
+            class="cart-item d-flex justify-content-between align-items-center"
+          >
+            <div>
+              <h4>Name</h4>
+              <p>price</p>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-danger">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <span class="fw-medium fs-4 p-1">3</span>
+              <button class="btn btn-success">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div> -->
+          </div>
+          <div>
+            <div>
+              <p>
+                Total Amount:
+                <span id="totalAmount" class="fw-medium fs-4">0</span> Rs
+              </p>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button" onclick="buynow()">
+                Buy now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container d-flex align-items-center p-3">
+        <div class="col">
+          <img src="images/logo-en.png" alt="logo" class="footer_img w-100" />
+        </div>
+        <div class="col">
+          <h5>JAZEAN</h5>
+          <ul class="footer-ul">
+            <li>Our Story</li>
+            <li>Store</li>
+            <li>Businesses</li>
+            <li>Blog & News</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>Follow Us</h5>
+          <div class="d-flex justify-content-around">
+            <div class="col social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="col social-links">
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <div class="col social-links">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="col social-links">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
+
+          <form>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <button type="submit" class="btn mb-2 w-100 mt-2 inp-submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
