@@ -450,7 +450,35 @@ button.reset:hover {
 }
 
 /* end login */
+/* start notification */
 
+#notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+#notification.hidden {
+  display: none;
+}
+
+#closeBtn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* end notification */
 /* footer */
 footer {
   /* height: 100px; */

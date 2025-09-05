@@ -247,7 +247,8 @@ function additemtocart(pid, quantity = 1) {
     }
   }
 
-  console.log(cart);
+  showNotification("product added to cart.");
+  // console.log(cart);
 }
 
 // let closeBtn = document.getElementById("closeBtn");
@@ -345,10 +346,13 @@ function openCart() {
 
 function buynow() {
   // alert shipping
-  alert("order will be shipped asap");
+  // alert("order will be shipped asap");
   cartItems.innerHTML = "";
   totalAmountSpan.innerHTML = 0;
-  console.log("buy now");
+  // console.log("buy now");
+  cart = [];
+  showNotification("order will be shipped asap");
+  closeCart();
 }
 
 // add element and delete element
@@ -508,7 +512,8 @@ form.addEventListener("submit", function (e) {
 
   if (ok) {
     saveToCookies();
-    alert("✅ Form submitted and data saved!");
+    // alert("✅ Form submitted and data saved!");
+    showNotification("New User is added");
     closeRegister();
   }
 });
@@ -564,7 +569,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   if (loginUsername === savedUsername && loginPassword === savedPassword) {
     errorDiv.style.display = "none";
-    alert("✅ Login successful! Welcome " + savedUsername);
+    // alert("✅ Login successful! Welcome " + savedUsername);
+    showNotification("Login successful! Welcome " + savedUsername);
     closelogin();
     authName.innerHTML = "";
     authName.innerHTML = savedUsername;
@@ -574,4 +580,31 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   }
 });
 
-// End losin --------------------------------------------------------------------------
+// End login --------------------------------------------------------------------------
+// start notification --------------------------------------------------------------------------
+// const showBtn = document.getElementById("showNotification");
+const notification = document.getElementById("notification");
+const closeBtn = document.getElementById("closeBtn");
+const notificationMsg = document.getElementById("notificationMsg");
+
+function showNotification(msg) {
+  notification.classList.remove("hidden");
+  notificationMsg.innerHTML = "";
+  notificationMsg.innerHTML = msg;
+  // Hide automatically after 3 seconds
+  setTimeout(() => {
+    notification.classList.add("hidden");
+  }, 3000);
+}
+// showBtn.addEventListener("click", () => {
+//   notification.classList.remove("hidden");
+
+//   // Hide automatically after 3 seconds
+//   setTimeout(() => {
+//     notification.classList.add("hidden");
+//   }, 3000);
+// });
+
+closeBtn.addEventListener("click", () => {
+  notification.classList.add("hidden");
+});
