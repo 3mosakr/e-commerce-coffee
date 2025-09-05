@@ -403,3 +403,175 @@ function minusElem(pId) {
 }
 
 // End cart --------------------------------------------------------------------------
+// start register --------------------------------------------------------------------------
+
+const form = document.getElementById("myForm");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const passInput = document.getElementById("password");
+const genderInputs = document.querySelectorAll('input[name="gender"]');
+
+const errName = document.getElementById("err-name");
+const errEmail = document.getElementById("err-email");
+const errPass = document.getElementById("err-password");
+const errGender = document.getElementById("err-gender");
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+let registerSection = document.getElementsByClassName("register_section")[0];
+function closeRegister() {
+  resetValuses();
+  registerSection.style.display = "none";
+}
+function openRegister() {
+  registerSection.style.display = "flex";
+}
+// ===== Cookie Helpers =====
+function setCookie(name, value, days = 7) {
+  const d = new Date();
+  d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+  document.cookie = `${name}=${encodeURIComponent(
+    value
+  )};expires=${d.toUTCString()};path=/`;
+}
+
+function deleteCookie(name) {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+}
+
+// ===== Validation =====
+function setError(el, errEl, msg) {
+  el?.classList.remove("is-valid");
+  el?.classList.add("is-invalid");
+  if (errEl) errEl.textContent = msg || "";
+}
+function clearError(el, errEl) {
+  el?.classList.remove("is-invalid");
+  el?.classList.add("is-valid");
+  if (errEl) errEl.textContent = "";
+}
+
+function validateName() {
+  const val = nameInput.value.trim();
+  if (!val) {
+    setError(nameInput, errName, "Name is required.");
+    return false;
+  }
+  clearError(nameInput, errName);
+  return true;
+}
+
+function validateEmail() {
+  const val = emailInput.value.trim();
+  if (!emailRegex.test(val)) {
+    setError(emailInput, errEmail, "Enter a valid email.");
+    return false;
+  }
+  clearError(emailInput, errEmail);
+  return true;
+}
+
+function validatePassword() {
+  const val = passInput.value;
+  if (val.length < 8) {
+    setError(passInput, errPass, "Password must be at least 8 characters.");
+    return false;
+  }
+  clearError(passInput, errPass);
+  return true;
+}
+
+function validateGender() {
+  const checked = document.querySelector('input[name="gender"]:checked');
+  if (!checked) {
+    errGender.textContent = "Please select your gender.";
+    return false;
+  }
+  errGender.textContent = "";
+  return true;
+}
+
+// ===== Save to Cookies =====
+function saveToCookies() {
+  setCookie("name", nameInput.value.trim());
+  setCookie("email", emailInput.value.trim());
+  setCookie("password", passInput.value); // ⚠️ للتجربة فقط
+  const gender = document.querySelector('input[name="gender"]:checked');
+  if (gender) setCookie("gender", gender.value);
+}
+
+// ===== Events =====
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const ok =
+    validateName() & validateEmail() & validatePassword() & validateGender();
+
+  if (ok) {
+    saveToCookies();
+    alert("✅ Form submitted and data saved!");
+    closeRegister();
+  }
+});
+
+form.addEventListener("reset", () => {
+  resetValuses();
+  // clear cookies
+  deleteCookie("name");
+  deleteCookie("email");
+  deleteCookie("password");
+  deleteCookie("gender");
+});
+
+function resetValuses() {
+  [nameInput, emailInput, passInput].forEach((i) =>
+    i.classList.remove("is-valid", "is-invalid")
+  );
+  [errName, errEmail, errPass, errGender].forEach((e) => (e.textContent = ""));
+}
+// Live validation
+nameInput.addEventListener("input", validateName);
+emailInput.addEventListener("input", validateEmail);
+passInput.addEventListener("input", validatePassword);
+genderInputs.forEach((r) => r.addEventListener("change", validateGender));
+// End register --------------------------------------------------------------------------
+
+// start login --------------------------------------------------------------------------
+let authName = document.getElementById("auth");
+let loginSection = document.getElementsByClassName("login_section")[0];
+function closelogin() {
+  loginSection.style.display = "none";
+}
+function openLogin() {
+  loginSection.style.display = "flex";
+}
+// helper function to read cookie
+function getCookie(name) {
+  let value = `; ${document.cookie}`;
+  let parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const loginUsername = document.getElementById("loginUsername").value.trim();
+  const loginPassword = document.getElementById("loginPassword").value;
+
+  const savedUsername = getCookie("name"); // جاي من فورم التسجيل
+  const savedPassword = getCookie("password");
+
+  const errorDiv = document.getElementById("loginErrors");
+
+  if (loginUsername === savedUsername && loginPassword === savedPassword) {
+    errorDiv.style.display = "none";
+    alert("✅ Login successful! Welcome " + savedUsername);
+    closelogin();
+    authName.innerHTML = "";
+    authName.innerHTML = savedUsername;
+  } else {
+    errorDiv.style.display = "block";
+    errorDiv.innerHTML = "❌ Invalid username or password.";
+  }
+});
+
+// End losin --------------------------------------------------------------------------

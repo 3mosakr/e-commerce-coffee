@@ -63,9 +63,12 @@
           <div class="nav_links_item"><a href="#">BLOG & NEWS</a></div>
           <div class="nav_links_item"><a href="#">CONTACT US</a></div>
         </div>
-        <div class="nav_cart">
-          <p class="lead p-3">auth</p>
-          <button class="btn btn-secondary">Login</button>
+        <div class="nav_cart gap-2">
+          <p class="lead p-3" id="auth"></p>
+          <button class="btn btn-secondary" onclick="openRegister()">
+            Register
+          </button>
+          <button class="btn btn-secondary" onclick="openLogin()">Login</button>
           <button class="btn-cart" onclick="openCart()">
             <i class="fa-solid fa-bag-shopping"></i>
           </button>
@@ -239,6 +242,70 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- auth -->
+      <div class="register_section">
+        <button class="btn btn-close-white close-btn" onclick="closeRegister()">
+          X
+        </button>
+
+        <form id="myForm" novalidate>
+          <!-- Name -->
+          <label for="name">UserName</label>
+          <input type="text" id="name" />
+          <small class="error-text" id="err-name"></small>
+
+          <!-- Email -->
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+          <small class="error-text" id="err-email"></small>
+
+          <!-- Password -->
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+          <small class="error-text" id="err-password"></small>
+
+          <!-- Gender -->
+          <fieldset class="group">
+            <legend>Gender</legend>
+            <label class="inline">
+              <input type="radio" id="male" name="gender" value="male" />
+              Male
+            </label>
+            <label class="inline">
+              <input type="radio" id="female" name="gender" value="female" />
+              Female
+            </label>
+            <small class="error-text" id="err-gender"></small>
+          </fieldset>
+
+          <div class="buttons">
+            <button type="submit" class="submit">submit</button>
+            <button type="reset" class="reset">reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="login_section">
+        <button class="btn btn-close-white close-btn" onclick="closelogin()">
+          X
+        </button>
+
+        <form id="loginForm">
+          <label>
+            Username
+            <input type="text" id="loginUsername" required />
+          </label>
+          <br />
+          <label>
+            Password
+            <input type="password" id="loginPassword" required />
+          </label>
+          <br />
+          <button type="submit" class="submit">Login</button>
+        </form>
+        <div id="loginErrors"></div>
       </div>
     </main>
     <footer>
